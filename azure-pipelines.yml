@@ -2,13 +2,11 @@ trigger:
 - 'main'
 
 variables:
-  buildConfiguration: 'Release'
+ buildConfiguration: 'Release'
   leaderboardRepository: 'leaderboard'
   webRepository: 'web'
   tag: '$(Build.BuildId)'
-    imagePullSecret: 'secret'
-
-stages:
+  imagePullSecret: 'secret'
 - stage: 'Build'
   displayName: 'Build and push'
   jobs:  
